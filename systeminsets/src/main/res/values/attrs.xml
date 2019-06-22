@@ -1,0 +1,78 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <attr name="systemInsetPaddingLeft" format="reference|dimension|enum" tools:ignore="ResourceName">
+        <enum name="none" value="-1" />
+        <enum name="all" value="-2" />
+    </attr>
+    <attr name="systemInsetPaddingTop" format="reference|dimension|enum" tools:ignore="ResourceName">
+        <enum name="none" value="-1" />
+        <enum name="all" value="-2" />
+    </attr>
+    <attr name="systemInsetPaddingRight" format="reference|dimension|enum" tools:ignore="ResourceName">
+        <enum name="none" value="-1" />
+        <enum name="all" value="-2" />
+    </attr>
+    <attr name="systemInsetPaddingBottom" format="reference|dimension|enum" tools:ignore="ResourceName">
+        <enum name="none" value="-1" />
+        <enum name="all" value="-2" />
+    </attr>
+
+    <attr name="systemInsetPaddingLeftNotApply" format="boolean" tools:ignore="ResourceName" />
+    <attr name="systemInsetPaddingTopNotApply" format="boolean" tools:ignore="ResourceName" />
+    <attr name="systemInsetPaddingRightNotApply" format="boolean" tools:ignore="ResourceName" />
+    <attr name="systemInsetPaddingBottomNotApply" format="boolean" tools:ignore="ResourceName" />
+
+    <attr name="systemInsetPaddingLeftNotConsume" format="boolean" tools:ignore="ResourceName" />
+    <attr name="systemInsetPaddingTopNotConsume" format="boolean" tools:ignore="ResourceName" />
+    <attr name="systemInsetPaddingRightNotConsume" format="boolean" tools:ignore="ResourceName" />
+    <attr name="systemInsetPaddingBottomNotConsume" format="boolean" tools:ignore="ResourceName" />
+
+    <declare-styleable name="SystemInsetsLayout" tools:ignore="ResourceName">
+        <attr name="systemInsetPaddingLeft" />
+        <attr name="systemInsetPaddingTop" />
+        <attr name="systemInsetPaddingRight" />
+        <attr name="systemInsetPaddingBottom" />
+        <attr name="systemInsetPaddingLeftNotApply" />
+        <attr name="systemInsetPaddingTopNotApply" />
+        <attr name="systemInsetPaddingRightNotApply" />
+        <attr name="systemInsetPaddingBottomNotApply" />
+        <attr name="systemInsetPaddingLeftNotConsume" />
+        <attr name="systemInsetPaddingTopNotConsume" />
+        <attr name="systemInsetPaddingRightNotConsume" />
+        <attr name="systemInsetPaddingBottomNotConsume" />
+    </declare-styleable>
+    <declare-styleable name="SystemInsetsFrameLayout" tools:ignore="ResourceName">
+        <attr name="systemInsetPaddingLeft" />
+        <attr name="systemInsetPaddingTop" />
+        <attr name="systemInsetPaddingRight" />
+        <attr name="systemInsetPaddingBottom" />
+        <attr name="systemInsetPaddingLeftNotApply" />
+        <attr name="systemInsetPaddingTopNotApply" />
+        <attr name="systemInsetPaddingRightNotApply" />
+        <attr name="systemInsetPaddingBottomNotApply" />
+        <attr name="systemInsetPaddingLeftNotConsume" />
+        <attr name="systemInsetPaddingTopNotConsume" />
+        <attr name="systemInsetPaddingRightNotConsume" />
+        <attr name="systemInsetPaddingBottomNotConsume" />
+    </declare-styleable>
+    <declare-styleable name="SystemInsetsLinearLayout" tools:ignore="ResourceName">
+        <attr name="systemInsetPaddingLeft" />
+        <attr name="systemInsetPaddingTop" />
+        <attr name="systemInsetPaddingRight" />
+        <attr name="systemInsetPaddingBottom" />
+        <attr name="systemInsetPaddingLeftNotApply" />
+        <attr name="systemInsetPaddingTopNotApply" />
+        <attr name="systemInsetPaddingRightNotApply" />
+        <attr name="systemInsetPaddingBottomNotApply" />
+        <attr name="systemInsetPaddingLeftNotConsume" />
+        <attr name="systemInsetPaddingTopNotConsume" />
+        <attr name="systemInsetPaddingRightNotConsume" />
+        <attr name="systemInsetPaddingBottomNotConsume" />
+    </declare-styleable>
+    <declare-styleable name="SystemInsetsLayerLayout">
+        <attr name="systemInsetsLayerDispatchResult" format="enum" tools:ignore="ResourceName">
+            <enum name="alwaysTrue" value="0" />
+            <enum name="alwaysFalse" value="1" />
+            <enum name="mergeChild" value="2" />
+        </attr>
+    </declare-styleable>
+</resources>
