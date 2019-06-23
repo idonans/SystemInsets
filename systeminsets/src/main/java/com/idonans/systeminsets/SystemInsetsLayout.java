@@ -42,4 +42,10 @@ public interface SystemInsetsLayout {
     @NonNull
     Rect getLastSystemInsets();
 
+    interface OnSystemInsetsListener {
+        void onSystemInsets(int left, int top, int right, int bottom);
+    }
+
+    void setOnSystemInsetsListener(OnSystemInsetsListener listener);
+
 }

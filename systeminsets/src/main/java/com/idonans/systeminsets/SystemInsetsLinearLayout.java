@@ -107,4 +107,9 @@ public class SystemInsetsLinearLayout extends LinearLayout implements SystemInse
         return mSystemInsetsLayoutHelper.getLastSystemInsets();
     }
 
+    @Override
+    public void setOnSystemInsetsListener(OnSystemInsetsListener listener) {
+        mSystemInsetsLayoutHelper.setOnSystemInsetsListener(listener);
+    }
+
 }

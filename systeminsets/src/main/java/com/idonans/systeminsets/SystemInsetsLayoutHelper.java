@@ -250,6 +250,11 @@ public class SystemInsetsLayoutHelper {
      */
     public Rect dispatchSystemInsets(int left, int top, int right, int bottom) {
         mLastSystemInsets.set(left, top, right, bottom);
+
+        if (mOnSystemInsetsListener != null) {
+            mOnSystemInsetsListener.onSystemInsets(left, top, right, bottom);
+        }
+
         return onSystemInsets(left, top, right, bottom);
     }
 
@@ -313,6 +318,12 @@ public class SystemInsetsLayoutHelper {
         }
 
         return resultValue;
+    }
+
+    private SystemInsetsLayout.OnSystemInsetsListener mOnSystemInsetsListener;
+
+    public void setOnSystemInsetsListener(SystemInsetsLayout.OnSystemInsetsListener listener) {
+        mOnSystemInsetsListener = listener;
     }
 
 }

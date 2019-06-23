@@ -107,4 +107,9 @@ public class SystemInsetsFrameLayout extends FrameLayout implements SystemInsets
         return mSystemInsetsLayoutHelper.getLastSystemInsets();
     }
 
+    @Override
+    public void setOnSystemInsetsListener(OnSystemInsetsListener listener) {
+        mSystemInsetsLayoutHelper.setOnSystemInsetsListener(listener);
+    }
+
 }
