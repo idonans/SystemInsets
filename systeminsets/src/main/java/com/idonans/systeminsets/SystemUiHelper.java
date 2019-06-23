@@ -2,6 +2,7 @@ package com.idonans.systeminsets;
 
 import android.os.Build;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.Window;
 import android.view.WindowManager;
 
@@ -13,6 +14,7 @@ import timber.log.Timber;
 public class SystemUiHelper {
 
     private Window mWindow;
+    private int mExtraWindowFlag;
     private int mSystemUiVisibility;
     private boolean mLightStatusBar;
     private boolean mLightNavigationBar;
@@ -22,6 +24,26 @@ public class SystemUiHelper {
 
     public SystemUiHelper layoutStatusBar() {
         mSystemUiVisibility |= View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN;
+        return this;
+    }
+
+    public SystemUiHelper setStatusBarColor(int color) {
+        mWindow.setStatusBarColor(color);
+        mExtraWindowFlag |= WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS;
+        return this;
+    }
+
+    public SystemUiHelper setNavigationBarColor(int color) {
+        mWindow.setNavigationBarColor(color);
+        mExtraWindowFlag |= WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS;
+        return this;
+    }
+
+    public SystemUiHelper setNavigationBarDividerColor(int color) {
+        if (Build.VERSION.SDK_INT >= 28) {
+            mWindow.setNavigationBarDividerColor(color);
+            mExtraWindowFlag |= WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS;
+        }
         return this;
     }
 
@@ -103,13 +125,15 @@ public class SystemUiHelper {
             }
         }
 
-        mWindow.getDecorView().setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
-            @Override
-            public void onSystemUiVisibilityChange(int visibility) {
+        View decorView = mWindow.getDecorView();
 
-            }
-        });
-        mWindow.getDecorView().setSystemUiVisibility(mSystemUiVisibility);
+        ViewGroup.LayoutParams decorViewLP = decorView.getLayoutParams();
+        if (decorViewLP instanceof WindowManager.LayoutParams) {
+            ((WindowManager.LayoutParams) decorViewLP).flags |= mExtraWindowFlag;
+            decorView.setLayoutParams(decorViewLP);
+        }
+
+        decorView.setSystemUiVisibility(mSystemUiVisibility);
     }
 
     public static SystemUiHelper from(Window window) {

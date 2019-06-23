@@ -1,5 +1,6 @@
 package com.idonans.example.systeminsets;
 
+import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -14,9 +15,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         SystemUiHelper.from(getWindow())
+                .setLightStatusBar(true)
+                .setStatusBarColor(Color.TRANSPARENT)
                 .layoutStatusBar()
                 .layoutStable()
-                .setLightStatusBar(true)
                 .apply();
     }
 
