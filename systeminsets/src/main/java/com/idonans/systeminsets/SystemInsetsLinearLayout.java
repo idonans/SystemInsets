@@ -66,7 +66,7 @@ public class SystemInsetsLinearLayout extends LinearLayout implements SystemInse
 
     @Override
     public void setSystemInsetsPaddingNotApply(boolean left, boolean top, boolean right, boolean bottom) {
-        mSystemInsetsLayoutHelper.setSystemInsetsPaddingNotApply(left, true, right, bottom);
+        mSystemInsetsLayoutHelper.setSystemInsetsPaddingNotApply(left, top, right, bottom);
     }
 
     @NonNull
