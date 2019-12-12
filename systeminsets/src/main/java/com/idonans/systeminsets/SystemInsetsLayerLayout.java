@@ -13,6 +13,7 @@ import android.widget.FrameLayout;
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.core.view.ViewCompat;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
@@ -80,6 +81,13 @@ public class SystemInsetsLayerLayout extends FrameLayout {
 
         if (DEBUG) {
             Timber.d("system insets layer dispatch result %s", mSystemInsetsLayerDispatchResult);
+        }
+    }
+
+    public void setSystemInsetsLayerDispatchResult(@DispatchResult int systemInsetsLayerDispatchResult) {
+        if (mSystemInsetsLayerDispatchResult != systemInsetsLayerDispatchResult) {
+            mSystemInsetsLayerDispatchResult = systemInsetsLayerDispatchResult;
+            ViewCompat.requestApplyInsets(this);
         }
     }
 
