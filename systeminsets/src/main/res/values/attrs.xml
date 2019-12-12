@@ -74,5 +74,11 @@
             <enum name="alwaysFalse" value="1" />
             <enum name="mergeChild" value="2" />
         </attr>
+        <attr name="systemInsetsLayerDispatchType" format="enum" tools:ignore="ResourceName">
+            <enum name="orderCopy" value="0" />
+            <enum name="order" value="1" />
+            <enum name="reverseCopy" value="2" />
+            <enum name="reverse" value="3" />
+        </attr>
     </declare-styleable>
 </resources>
