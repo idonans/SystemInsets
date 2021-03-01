@@ -15,8 +15,6 @@ import androidx.core.view.ViewCompat;
 
 import java.util.Arrays;
 
-import timber.log.Timber;
-
 /**
  * 辅助处理自定义 window insets, 屏蔽版本差异 {@link #onSystemInsets(int, int, int, int)}
  */
@@ -109,7 +107,7 @@ public class SystemInsetsLayoutHelper {
         a.recycle();
 
         if (DEBUG) {
-            Timber.d("fit inset padding %s", getSystemInsetsPadding());
+            LibLog.d("fit inset padding %s", getSystemInsetsPadding());
         }
     }
 
@@ -144,7 +142,6 @@ public class SystemInsetsLayoutHelper {
                 mSystemInsetPaddingBottomNotApply};
     }
 
-    @NonNull
     public void setSystemInsetsPaddingNotApply(boolean left, boolean top, boolean right, boolean bottom) {
         if (mSystemInsetPaddingLeftNotApply != left
                 || mSystemInsetPaddingTopNotApply != top
@@ -287,7 +284,7 @@ public class SystemInsetsLayoutHelper {
         remain.bottom = notConsume[Index.BOTTOM] ? bottom : bottom - targetInsets.bottom;
 
         if (DEBUG) {
-            Timber.v(
+            LibLog.v(
                     "onSystemInsets:%s=> targetInsets:%s->%s padding:%s->%s remain:%s->%s",
                     new Rect(left, top, right, bottom),
                     getSystemInsetsPadding(), targetInsets,

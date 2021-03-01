@@ -18,8 +18,6 @@ import androidx.core.view.ViewCompat;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
-import timber.log.Timber;
-
 /**
  * 辅助处理自定义 window insets。自定义 window insets 在每一个 child view 的分发逻辑。
  * 支持：顺序等额分发(默认), 逆序等额分发，顺序串行分发，逆序串行分发。
@@ -97,7 +95,7 @@ public class SystemInsetsLayerLayout extends FrameLayout {
         }
 
         if (DEBUG) {
-            Timber.d("system insets layer dispatch result %s", mSystemInsetsLayerDispatchResult);
+            LibLog.d("system insets layer dispatch result %s", mSystemInsetsLayerDispatchResult);
         }
     }
 
