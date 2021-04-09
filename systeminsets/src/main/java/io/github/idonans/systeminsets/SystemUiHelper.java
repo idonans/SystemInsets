@@ -117,9 +117,9 @@ public class SystemUiHelper {
         // [4.4, 6.0) 之间的部分第三方 rom 支持设置 status bar 字体颜色
         if (Build.VERSION.SDK_INT >= 19 && Build.VERSION.SDK_INT < 23) {
             if (MIUICompat.setStatusBarStyle(mWindow, mLightStatusBar)) {
-                LibLog.v("success set miui status bar black text color %s", mLightStatusBar);
+                SystemInsetsLog.v("success set miui status bar black text color %s", mLightStatusBar);
             } else if (FlymeCompat.setStatusBarStyle(mWindow, mLightStatusBar)) {
-                LibLog.v("success set flyme status bar black text color %s", mLightStatusBar);
+                SystemInsetsLog.v("success set flyme status bar black text color %s", mLightStatusBar);
             }
         }
 

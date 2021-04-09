@@ -107,7 +107,7 @@ public class SystemInsetsLayoutHelper {
         a.recycle();
 
         if (DEBUG) {
-            LibLog.d("fit inset padding %s", getSystemInsetsPadding());
+            SystemInsetsLog.d("fit inset padding %s", getSystemInsetsPadding());
         }
     }
 
@@ -284,7 +284,7 @@ public class SystemInsetsLayoutHelper {
         remain.bottom = notConsume[Index.BOTTOM] ? bottom : bottom - targetInsets.bottom;
 
         if (DEBUG) {
-            LibLog.v(
+            SystemInsetsLog.v(
                     "onSystemInsets:%s=> targetInsets:%s->%s padding:%s->%s remain:%s->%s",
                     new Rect(left, top, right, bottom),
                     getSystemInsetsPadding(), targetInsets,

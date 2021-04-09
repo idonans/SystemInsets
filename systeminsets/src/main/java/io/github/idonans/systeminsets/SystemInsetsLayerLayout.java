@@ -95,7 +95,7 @@ public class SystemInsetsLayerLayout extends FrameLayout {
         }
 
         if (DEBUG) {
-            LibLog.d("system insets layer dispatch result %s", mSystemInsetsLayerDispatchResult);
+            SystemInsetsLog.d("system insets layer dispatch result %s", mSystemInsetsLayerDispatchResult);
         }
     }
 
