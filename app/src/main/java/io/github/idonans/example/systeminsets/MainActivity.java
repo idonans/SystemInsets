@@ -1,11 +1,11 @@
-package com.idonans.example.systeminsets;
+package io.github.idonans.example.systeminsets;
 
 import android.graphics.Color;
 import android.os.Bundle;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.idonans.systeminsets.SystemUiHelper;
+import io.github.idonans.systeminsets.SystemUiHelper;
 
 public class MainActivity extends AppCompatActivity {
 

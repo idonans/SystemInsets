@@ -5,6 +5,6 @@
 
 ```groovy
 
-    implementation 'com.idonans.systeminsets:systeminsets:$latestVersion'
+    implementation 'io.github.idonans.systeminsets:systeminsets:$latestVersion'
 
 ```

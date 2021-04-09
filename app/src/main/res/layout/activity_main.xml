@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <com.idonans.systeminsets.SystemInsetsFrameLayout
+    <io.github.idonans.systeminsets.SystemInsetsFrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFF0000"
@@ -16,7 +16,7 @@
         app:systemInsetPaddingTop="all"
         app:systemInsetPaddingTopNotConsume="true" />
 
-    <com.idonans.systeminsets.SystemInsetsFrameLayout
+    <io.github.idonans.systeminsets.SystemInsetsFrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="#FFFF0000"

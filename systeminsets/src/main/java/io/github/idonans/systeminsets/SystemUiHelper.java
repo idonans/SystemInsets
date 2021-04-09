@@ -1,4 +1,4 @@
-package com.idonans.systeminsets;
+package io.github.idonans.systeminsets;
 
 import android.os.Build;
 import android.view.View;

@@ -1,4 +1,4 @@
-package com.idonans.systeminsets;
+package io.github.idonans.systeminsets;
 
 import android.annotation.TargetApi;
 import android.graphics.Rect;

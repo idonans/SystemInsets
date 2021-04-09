@@ -31,7 +31,6 @@ dependencies {
     api rootProject.ext.bcfg.deps.androidx_appcompat
 }
 
-// apply from: ('bintray.gradle')
-apply from: ('mavenLocal.gradle')
+apply from: rootProject.file('gradle-mvn-push.gradle')
 
 

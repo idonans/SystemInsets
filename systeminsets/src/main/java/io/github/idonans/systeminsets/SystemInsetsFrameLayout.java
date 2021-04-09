@@ -1,4 +1,4 @@
-package com.idonans.systeminsets;
+package io.github.idonans.systeminsets;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -6,7 +6,7 @@ import android.graphics.Rect;
 import android.os.Build;
 import android.util.AttributeSet;
 import android.view.WindowInsets;
-import android.widget.LinearLayout;
+import android.widget.FrameLayout;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,26 +14,26 @@ import androidx.annotation.Nullable;
 /**
  * 辅助处理自定义 window insets
  */
-public class SystemInsetsLinearLayout extends LinearLayout implements SystemInsetsLayout {
+public class SystemInsetsFrameLayout extends FrameLayout implements SystemInsetsLayout {
 
     private final SystemInsetsLayoutHelper mSystemInsetsLayoutHelper;
 
-    public SystemInsetsLinearLayout(Context context) {
+    public SystemInsetsFrameLayout(Context context) {
         this(context, null);
     }
 
-    public SystemInsetsLinearLayout(Context context, AttributeSet attrs) {
+    public SystemInsetsFrameLayout(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
 
-    public SystemInsetsLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SystemInsetsFrameLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         mSystemInsetsLayoutHelper = createFitInsetsLayoutHelper();
         mSystemInsetsLayoutHelper.init(context, attrs, defStyleAttr, 0);
     }
 
     @TargetApi(Build.VERSION_CODES.LOLLIPOP)
-    public SystemInsetsLinearLayout(
+    public SystemInsetsFrameLayout(
             @NonNull Context context,
             @Nullable AttributeSet attrs,
             int defStyleAttr,
