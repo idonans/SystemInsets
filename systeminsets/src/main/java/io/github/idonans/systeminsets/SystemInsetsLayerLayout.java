@@ -35,11 +35,9 @@ public class SystemInsetsLayerLayout extends FrameLayout {
     }
 
     public SystemInsetsLayerLayout(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        init(context, attrs, defStyleAttr, 0);
+        this(context, attrs, defStyleAttr, 0);
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public SystemInsetsLayerLayout(
             @NonNull Context context,
             @Nullable AttributeSet attrs,

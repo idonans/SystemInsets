@@ -27,12 +27,9 @@ public class SystemInsetsLinearLayout extends LinearLayout implements SystemInse
     }
 
     public SystemInsetsLinearLayout(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        mSystemInsetsLayoutHelper = createFitInsetsLayoutHelper();
-        mSystemInsetsLayoutHelper.init(context, attrs, defStyleAttr, 0);
+        this(context, attrs, defStyleAttr, 0);
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public SystemInsetsLinearLayout(
             @NonNull Context context,
             @Nullable AttributeSet attrs,

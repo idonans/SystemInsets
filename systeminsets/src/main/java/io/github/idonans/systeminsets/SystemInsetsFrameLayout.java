@@ -27,12 +27,9 @@ public class SystemInsetsFrameLayout extends FrameLayout implements SystemInsets
     }
 
     public SystemInsetsFrameLayout(Context context, AttributeSet attrs, int defStyleAttr) {
-        super(context, attrs, defStyleAttr);
-        mSystemInsetsLayoutHelper = createFitInsetsLayoutHelper();
-        mSystemInsetsLayoutHelper.init(context, attrs, defStyleAttr, 0);
+        this(context, attrs, defStyleAttr, 0);
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public SystemInsetsFrameLayout(
             @NonNull Context context,
             @Nullable AttributeSet attrs,
